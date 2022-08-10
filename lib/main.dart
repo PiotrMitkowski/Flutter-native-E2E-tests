@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:native_test_demo/geolocation_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -98,6 +99,18 @@ class _MyHomePageState extends State<MyHomePage> {
             Text(
               'Button tapped $_counter time${_counter == 1 ? '' : 's'}.',
               key: const ValueKey<String>('CountText'),
+            ),
+            ElevatedButton(
+              key: const ValueKey<String>('geolocation_page_button'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => const GeolocationPage(),
+                  ),
+                );
+              },
+              child: const Text('Geolocation test'),
             ),
           ],
         ),
