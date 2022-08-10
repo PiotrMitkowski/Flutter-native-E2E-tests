@@ -45,7 +45,6 @@ public class MainActivityTest {
         onFlutterWidget(withValueKey("get_current_position_button")).perform(click());
 
         grantPermission();
-        Thread.sleep(2 * 1000);
         onFlutterWidget(withValueKey("current_position_text")).check(matches(withText("Current location: 45.5016883, -73.567255")));
     }
 
