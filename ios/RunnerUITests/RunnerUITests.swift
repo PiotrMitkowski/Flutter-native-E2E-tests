@@ -68,4 +68,20 @@ class RunnerUITests: XCTestCase {
         }
         XCTAssert(counterLabel.exists)
     }
+    
+    func testGettingCurrentLocation() throws {
+        let geolocationPageButton = app.buttons["Geolocation test"]
+        if !geolocationPageButton.waitForExistence(timeout: kElementWaitingTime) {
+            XCTFail("Failed due to not able to find counter button with \(kElementWaitingTime) seconds")
+        }
+        XCTAssertTrue(geolocationPageButton.exists)
+        geolocationPageButton.tap()
+        
+//        let counterLabelPredicate = NSPredicate(format: "label ==[c] %@", "Button tapped 1 time.")
+//        let counterLabel = app.staticTexts.element(matching: counterLabelPredicate)
+//        if !counterLabel.waitForExistence(timeout: kElementWaitingTime) {
+//            XCTFail("Failed due to not able to find counter label with \(kElementWaitingTime) seconds")
+//        }
+//        XCTAssert(counterLabel.exists)
+    }
 }
