@@ -99,26 +99,33 @@ class _MyHomePageState extends State<MyHomePage> {
             Text(
               'Button tapped $_counter time${_counter == 1 ? '' : 's'}.',
               key: const ValueKey<String>('CountText'),
+              // semanticsLabel: 'CountText',
             ),
-            ElevatedButton(
-              key: const ValueKey<String>('geolocation_page_button'),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (_) => const GeolocationPage(),
-                  ),
-                );
-              },
-              child: const Text('Geolocation test'),
+            Semantics(
+              label: 'geolocation_page_button',
+              child: ElevatedButton(
+                key: const ValueKey<String>('geolocation_page_button'),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => const GeolocationPage(),
+                    ),
+                  );
+                },
+                child: const Text('Geolocation test'),
+              ),
             ),
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
+      floatingActionButton: Semantics(
+        label: 'Increment',
+        child: FloatingActionButton(
+          onPressed: _incrementCounter,
+          tooltip: 'Increment',
+          child: const Icon(Icons.add),
+        ),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
