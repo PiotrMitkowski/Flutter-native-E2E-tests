@@ -28,7 +28,7 @@ class _GeolocationPageState extends State<GeolocationPage> {
               'Current location: $formattedPosition',
               key: const ValueKey<String>('current_position_text'),
             ),
-            Text('Permission status: ${_permission ?? 'Unknown'}'),
+            Text('Permission status: ${_permission?.name ?? 'Unknown'}'),
             const SizedBox(height: 6.0),
             ElevatedButton(
               key: const ValueKey<String>('get_current_position_button'),

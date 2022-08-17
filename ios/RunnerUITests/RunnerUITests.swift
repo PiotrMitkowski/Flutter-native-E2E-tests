@@ -90,11 +90,13 @@ class RunnerUITests: XCTestCase {
         let _ = XCTWaiter.wait(for: [exp], timeout: 2.0)
         app.tap()
         
-        let currentPositionLabelPredicate = NSPredicate(format: "label ==[c] %@", "Current location: 45.47655, -73.61355")
-        let currentPositionLabel = app.staticTexts.element(matching: currentPositionLabelPredicate)
-        if !currentPositionLabel.waitForExistence(timeout: systemPopupWaitingTime) {
+        // Xcode testing CLI doesn't allow setting a custom location, so only permission
+        // grant is checked
+        let grantedPermissionLabelPredicate = NSPredicate(format: "label ==[c] %@", "Permission status: whileInUse")
+        let grantedPermissionLabel = app.staticTexts.element(matching: grantedPermissionLabelPredicate)
+        if !grantedPermissionLabel.waitForExistence(timeout: systemPopupWaitingTime) {
             XCTFail("Failed due to not able to find current position label with \(kElementWaitingTime) seconds")
         }
-        XCTAssert(currentPositionLabel.exists)
+        XCTAssert(grantedPermissionLabel.exists)
     }
 }

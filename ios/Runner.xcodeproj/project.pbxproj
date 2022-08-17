@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		066F433528ABE1E3009FE3C0 /* RunnerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066F433428ABE1E3009FE3C0 /* RunnerUITests.swift */; };
+		066F433F28AD0B7C009FE3C0 /* Montreal.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 066F433E28AD0B7C009FE3C0 /* Montreal.gpx */; };
 		1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */ = {isa = PBXBuildFile; fileRef = 1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */; };
 		3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */; };
 		6FAFD554ECB6C5043B6B0469 /* Pods_Runner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FFBA0C18F0D319BD814E18E /* Pods_Runner.framework */; };
@@ -43,6 +44,7 @@
 /* Begin PBXFileReference section */
 		066F433228ABE1E3009FE3C0 /* RunnerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RunnerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		066F433428ABE1E3009FE3C0 /* RunnerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunnerUITests.swift; sourceTree = "<group>"; };
+		066F433E28AD0B7C009FE3C0 /* Montreal.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Montreal.gpx; sourceTree = "<group>"; };
 		1498D2321E8E86230040F4C2 /* GeneratedPluginRegistrant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneratedPluginRegistrant.h; sourceTree = "<group>"; };
 		1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneratedPluginRegistrant.m; sourceTree = "<group>"; };
 		3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = AppFrameworkInfo.plist; path = Flutter/AppFrameworkInfo.plist; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */,
 				74858FAE1ED2DC5600515810 /* AppDelegate.swift */,
 				74858FAD1ED2DC5600515810 /* Runner-Bridging-Header.h */,
+				066F433E28AD0B7C009FE3C0 /* Montreal.gpx */,
 			);
 			path = Runner;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				066F433F28AD0B7C009FE3C0 /* Montreal.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
